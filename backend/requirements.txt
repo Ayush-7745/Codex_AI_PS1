@@ -1,0 +1,10 @@
+fastapi
+python-multipart
+uvicorn[standard]
+pydantic
+python-dotenv
+pandas
+rapidfuzz
+google-genai
+sarvamai
+httpx2

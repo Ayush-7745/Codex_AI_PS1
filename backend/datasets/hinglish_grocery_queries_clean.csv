@@ -1,0 +1,101 @@
+﻿query_id,customer_message,english_meaning,query_type,language,domain
+c001,bhaiya 2 kilo atta de do,2 kg wheat flour,order_quantity,mixed,grocery
+c002,ek Amul butter bhi dena,1 Amul butter,brand_query,mixed,grocery
+c005,Amul butter chahiye,Amul butter,ambiguous_query,mixed,grocery
+c006,2 packet Maggi,2 packs Maggi noodles,order_quantity,mixed,grocery
+c007,ek litre Fortune tel,1 litre Fortune oil,brand_query,mixed,grocery
+c011,ek packet parle g,1 pack Parle-G biscuits,brand_query,mixed,grocery
+c012,2 bottle paani,2 bottles drinking water,order_quantity,mixed,grocery
+c013,500 gram kaju,500 g cashews,numeric_query,mixed,grocery
+c014,1 litre ghee,1 litre ghee,numeric_query,mixed,grocery
+c015,Aashirvaad aata 5kg,5 kg Aashirvaad atta,brand_query,mixed,grocery
+c017,Fortune sunflower oil 1L,1 litre Fortune sunflower oil,brand_query,mixed,grocery
+c018,Saffola oil bhi dena,Saffola oil,brand_query,mixed,grocery
+c019,Tata salt ek packet,1 pack Tata Salt,brand_query,mixed,grocery
+c020,chai patti 250 gram,250 g tea,numeric_query,mixed,grocery
+c021,coffee 200g,200 g coffee,numeric_query,mixed,grocery
+c022,3 biscuit packet,3 biscuit packs,order_quantity,mixed,grocery
+c025,1 kilo tomato,1 kg tomatoes,numeric_query,mixed,grocery
+c026,aloo 2 kilo,2 kg potatoes,numeric_query,mixed,grocery
+c035,atta aur dal dono dena,atta + dal,multi_item,mixed,grocery
+c036,"2 kilo atta, ek butter aur sugar half kilo",2 kg atta + 1 butter + 0.5 kg sugar,multi_item,mixed,grocery
+c037,bhaiya ek Amul butter aur 2 packet Maggi bhej do,1 Amul butter + 2 Maggi packs,multi_item,mixed,grocery
+c038,Fortune tel 5 litre milega kya,5 litre Fortune oil,numeric_query,mixed,grocery
+c040,normal wala biscuit,regular biscuits,ambiguous_query,mixed,grocery
+c041,amul butter ka half kilo,0.5 kg Amul butter,numeric_query,mixed,grocery
+c042,250 ml wala handwash,250 ml hand wash,numeric_query,mixed,grocery
+c043,Surf Excel 1 kg,1 kg Surf Excel,brand_query,mixed,grocery
+c045,Colgate 200g ka,200 g Colgate toothpaste,numeric_query,mixed,grocery
+c046,Dabur honey 500 gram,500 g Dabur honey,brand_query,mixed,grocery
+c047,Tata Sampann toor dal 1kg,1 kg Tata Sampann toor dal,brand_query,mixed,grocery
+c048,Everest garam masala 100g,100 g Everest garam masala,brand_query,mixed,grocery
+c050,bread ek packet,1 pack bread,order_quantity,mixed,grocery
+c051,milk 2 packet,2 packs milk,order_quantity,mixed,grocery
+c054,paneer 250 gram,250 g paneer,numeric_query,mixed,grocery
+c056,chai 1 kilo,1 kg tea,numeric_query,mixed,grocery
+c057,nescafe 100g,100 g Nescafe,brand_query,mixed,grocery
+c058,bru coffee 200 gram,200 g Bru coffee,brand_query,mixed,grocery
+c059,Parle G 5 packet,5 Parle-G packs,brand_query,mixed,grocery
+c060,biscit 2 packet,2 biscuit packs,misspelling,mixed,grocery
+c061,sugr 1 kg,1 kg sugar,misspelling,mixed,grocery
+c064,buter 500g,500 g butter,misspelling,mixed,grocery
+c065,Amul butter 10 packet,10 packs Amul butter,stock_case,mixed,grocery
+q0090,bachho ke liye cereal,cereal for kids,mixed_language,mixed,grocery
+q0095,mujhe achhi wali coffee chahiye,good coffee,voice_search,mixed,grocery
+c003,sugar aadha kilo chahiye,0.5 kg sugar,numeric_query,roman_hi,grocery
+c004,tel bhi chahiye,cooking oil,ambiguous_query,roman_hi,grocery
+c008,5 kilo chawal chahiye,5 kg rice,order_quantity,roman_hi,grocery
+c009,do kilo chini,2 kg sugar,order_quantity,roman_hi,grocery
+c010,aadha kilo dal,0.5 kg dal,order_quantity,roman_hi,grocery
+c016,Aashirvaad wala atta dena,Aashirvaad atta,brand_query,roman_hi,grocery
+c023,do dozen ande,24 eggs,order_quantity,roman_hi,grocery
+c024,ek darjan eggs,12 eggs,order_quantity,roman_hi,grocery
+c027,pyaaz ek kilo,1 kg onions,numeric_query,roman_hi,grocery
+c028,masala chahiye,spices/masala,ambiguous_query,roman_hi,grocery
+c029,Maggi ka bada packet dena,large pack Maggi,ambiguous_query,roman_hi,grocery
+c030,Amul ka makhan 500 gram,500 g Amul butter,brand_query,roman_hi,grocery
+c031,makhan 1 kilo,1 kg butter,numeric_query,roman_hi,grocery
+c032,namak 2 packet,2 packs salt,order_quantity,roman_hi,grocery
+c033,aata 10 kilo,10 kg wheat flour,numeric_query,roman_hi,grocery
+c034,chini 1 kg aur chawal 5 kg,1 kg sugar + 5 kg rice,multi_item,roman_hi,grocery
+c039,sasta wala tel de do,cheapest suitable cooking oil,ambiguous_query,roman_hi,grocery
+c044,Harpic aadha litre,0.5 litre Harpic,numeric_query,roman_hi,grocery
+c049,MDH masala dena,MDH masala,brand_query,roman_hi,grocery
+c052,doodh do litre,2 litres milk,numeric_query,roman_hi,grocery
+c053,dahi aadha kilo,0.5 kg curd,numeric_query,roman_hi,grocery
+c055,ghee chahiye,ghee,short_query,roman_hi,grocery
+c062,aata 5 kilo,5 kg atta,misspelling,roman_hi,grocery
+c063,chinni aadha kilo,0.5 kg sugar,misspelling,roman_hi,grocery
+q0079,aata 10 kg,wheat flour 10kg,roman_hindi,roman_hi,grocery
+q0081,sarson ka tel,mustard oil,roman_hindi,roman_hi,grocery
+q0084,chai patti,tea leaves,roman_hindi,roman_hi,grocery
+q0087,dal,lentils,short_query,roman_hi,grocery
+q0088,toor dal 1kg,toor dal 1kg,numeric_query,roman_hi,grocery
+q0092,besan,gram flour,short_query,roman_hi,grocery
+q0094,ghee 1 litre,ghee 1 litre,numeric_query,roman_hi,grocery
+q0097,fresh chakki atta,fresh chakki atta,attribute_query,roman_hi,grocery
+q0098,kaju 500 gram,cashew 500 gram,numeric_query,roman_hi,grocery
+q0101,nariyal tel,coconut oil,roman_hindi,roman_hi,grocery
+q0105,elaichi,cardamom,short_query,roman_hi,grocery
+q0110,sasta wala cooking oil,cheap cooking oil,hinglish,roman_hi,grocery
+q0082,सरसों का तेल,mustard oil,pure_hindi,hi,grocery
+q0078,basmati rice 5kg,basmati rice 5kg,numeric_query,en,grocery
+q0080,cooking oil,cooking oil,short_query,en,grocery
+q0083,green tea bags,green tea bags,attribute_query,en,grocery
+q0085,sugar free sweetener,sugar free sweetener,attribute_query,en,grocery
+q0086,maggi noodles pack of 12,maggi noodles 12 pack,numeric_query,en,grocery
+q0089,namkeen haldiram,haldiram namkeen,brand_query,en,grocery
+q0091,organic honey,organic honey,attribute_query,en,grocery
+q0093,peanut butter crunchy,crunchy peanut butter,attribute_query,en,grocery
+q0096,cold drink pack,soft drink pack,short_query,en,grocery
+q0099,parle g biscuit,parle g biscuit,brand_query,en,grocery
+q0100,healthy snacks for weight loss,healthy snacks weight loss,long_query,en,grocery
+q0102,dairy milk chocolate,dairy milk chocolate,brand_query,en,grocery
+q0103,brown rice,brown rice,attribute_query,en,grocery
+q0104,masala for chicken,chicken masala,mixed_language,en,grocery
+q0106,packed drinking water 1 litre,1 litre drinking water,numeric_query,en,grocery
+q0107,healthy breakfast options,healthy breakfast,ambiguous_query,en,grocery
+q0108,mixed dry fruits 1kg,mixed dry fruits 1kg,numeric_query,en,grocery
+q0109,tata salt,tata salt,brand_query,en,grocery
+q0111,choclate,chocolate,misspelling,en,grocery
+q0112,biscit,biscuit,misspelling,en,grocery

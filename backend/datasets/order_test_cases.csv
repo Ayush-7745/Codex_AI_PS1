@@ -1,0 +1,61 @@
+﻿test_id,customer_message,issue_type,problem,expected_action,expected_question,related_products
+T001,2 kilo atta de do,successful_order,Clear product + quantity,Proceed to product matching and stock check,,Aashirvaad Atta P0403 / Fortune Atta P0405
+T002,Aashirvaad aata 5kg,successful_order,Brand and pack size are explicit,Match exact product and continue,,P0403
+T003,Tata salt ek packet,successful_order,Brand and quantity are clear,Match Tata Salt 1kg as default pack only if catalog policy allows; otherwise clarify pack size,,P0406 / P0407
+T004,500 gram kaju,successful_order,Product and quantity are clear,Match cashews and check stock,,Cashew product from catalog
+T005,Fortune sunflower oil 1L,successful_order,"Brand, product, pack size clear",Match exact product and check stock,,P0415
+T006,Parle-G 250g,successful_order,Brand + product + pack size clear,Match exact product and check stock,,P0428
+T007,Harpic 1L,successful_order,Brand + product + pack size clear,Match exact product and check stock,,P0440
+T008,Dabur honey 500 gram,successful_order,Brand + product + quantity clear,Match exact product and check stock,,P0435
+T009,Amul butter chahiye,ambiguity,"Amul Butter has 100g, 500g and 1kg variants",Ask customer to choose pack size,"Which Amul Butter do you want: 100g, 500g, or 1kg?",P0418 / P0419 / P0420
+T010,Maggi ka bada packet dena,ambiguity,More than one Maggi pack size exists,Ask what pack size/quantity the customer means,"Which Maggi pack do you want: 70g, 140g, or 280g?",P0425 / P0426 / P0427
+T011,Harpic dena,ambiguity,Harpic has 500ml and 1L variants,Ask pack size,500ml ya 1L Harpic chahiye?,P0439 / P0440
+T012,Parle G dena,ambiguity,Parle-G has multiple pack sizes,Ask pack size,250g ya 800g Parle-G chahiye?,P0428 / P0429
+T013,tel bhi chahiye,ambiguity,Generic oil request can match multiple oil products,Ask oil type/brand,"Kaunsa tel chahiye—sunflower, mustard, ya koi specific brand?",Fortune/Saffola/other oil products
+T014,masala chahiye,ambiguity,Generic masala is not specific enough,Ask which masala,"Kaunsa masala chahiye—garam masala, chana masala, ya koi aur?",P0437 / P0438 / other masala
+T015,biscuit chahiye,ambiguity,Many biscuit products can match,Ask brand/type or show options,Kaunsa biscuit chahiye? Parle-G ya koi aur?,P0428 / P0429 / other biscuits
+T016,Amul ka kuch dairy wala dena,ambiguity,Product type is not specified,Ask exact dairy product,"Amul ka kya chahiye—milk, butter, paneer, ya ghee?",Amul product family
+T017,sugar aadha kilo chahiye,quantity_normalization,Hindi fraction must become 0.5kg,Normalize quantity and continue,,Sugar
+T018,do kilo chini,quantity_normalization,Chini is a synonym for sugar,Map chini→sugar and quantity=2kg,,Sugar
+T019,doodh do litre,quantity_normalization,Doodh is milk; Hindi quantity expression,Map doodh→milk and quantity=2L,,P0421 / P0422
+T020,ek darjan eggs,quantity_normalization,Darjan/dozen means 12,Normalize to 12 eggs,,Eggs
+T021,do dozen ande,quantity_normalization,Do dozen = 24,Normalize to 24 eggs,,Eggs
+T022,aata 10 kilo,quantity_normalization,Aata→atta and quantity=10kg,"Normalize term and quantity, then match suitable pack(s)",,P0404 / other atta
+T023,biscit 2 packet,misspelling,Biscit should match biscuit,Correct/match spelling and continue,,P0428 / P0429
+T024,chinni aadha kilo,misspelling,Chinni→chini→sugar; aadha kilo=0.5kg,Normalize spelling + quantity,,Sugar
+T025,buter 500g,misspelling,Buter→butter,Normalize spelling and match 500g butter,,P0419
+T026,aata 5 kilo,misspelling,Aata is common variant for atta,Normalize alias and continue,,P0403 / P0405
+T027,ek Amul butter bhi dena,brand_matching,Amul + butter identifies brand/product but not pack size,Brand is clear; ask pack size if multiple variants are returned,Which Amul Butter pack size do you want?,P0418 / P0419 / P0420
+T028,Aashirvaad wala atta dena,brand_matching,"Brand is clear, pack size not specified",Show available Aashirvaad atta sizes and ask if needed,5kg ya 10kg Aashirvaad atta?,P0403 / P0404
+T029,Fortune tel 5 litre,brand_matching,Brand + product + quantity are clear,Match exact Fortune 5L oil if product type is resolved; check stock,,P0416
+T030,Tata Sampann toor dal 1kg,brand_matching,Brand + product + size clear,Match exact product and check stock,,P0410
+T031,2 packets Amul butter 1kg wala,insufficient_stock,Amul Butter 1kg stock is 1,Tell customer only 1 is available and ask whether to proceed,Only 1 pack is available. Would you like 1 pack?,P0420
+T032,4 bottles Harpic 1L,insufficient_stock,Harpic 1L stock is 2,Tell customer available quantity and ask whether to reduce,Only 2 bottles are available. Would you like 2?,P0440
+T033,4 packets Surf Excel 2kg,insufficient_stock,Surf Excel 2kg stock is 3,Offer available quantity or alternative,Only 3 packs are available. Would you like 3?,P0442
+T034,Patanjali sesame oil chahiye,out_of_stock,Selected catalog item has stock 0,Inform customer it is out of stock and offer alternatives,Patanjali Sesame Oil is out of stock. Would you like another oil?,P0029 / Sesame Oil product
+T035,MTR puliogare powder chahiye,out_of_stock,Selected catalog item has stock 0,Inform customer and offer another masala option,MTR Puliogare Powder is out of stock. Would you like another masala?,P0146
+T036,Amul butter cookies chahiye,out_of_stock,Selected catalog item has stock 0 in prototype catalog,Inform customer and offer alternatives,Amul Butter Cookies are out of stock. Would you like another biscuit?,P0001
+T037,"2 kilo atta, ek butter aur sugar half kilo",multi_item,Multiple products + mixed quantity expressions,"Parse all three items separately, then match and validate each",,Atta + Amul Butter + Sugar
+T038,atta aur dal dono dena,multi_item,Two products in one utterance,Create two order lines and validate each,,Atta + Dal
+T039,ek Amul butter aur 2 packet Maggi bhej do,multi_item,Brand item + pack quantity,Create two order lines and check stock,,Amul Butter + Maggi
+T040,chini 1 kg aur chawal 5 kg,multi_item,Two clear items,Parse sugar and rice separately,,Sugar + Rice
+T041,xyz namak dena,unknown_product,Brand/product token does not match catalog,Ask customer to choose a known salt/product,Mujhe xyz namak nahi mila. Kaunsa salt/brand chahiye?,Tata Salt / other salt
+T042,special wali chai,ambiguous_query,No brand/type/size supplied,Ask what 'special' means or show tea options,Kaunsi chai chahiye? Koi brand ya size bataiye.,Tea products
+T043,Amul butter 500 gram,exact_match,Exact pack size matches P0419,Match exact product and continue,,P0419
+T044,Tata salt 2kg,exact_match,Exact pack size matches P0407,Match exact product and continue,,P0407
+T045,Maggi 140g ke 3 packet,exact_match,Exact product size + quantity,Match P0426 and quantity=3; check stock,,P0426
+T046,Amul butter aur tel dena,clarification_loop,Butter has pack ambiguity and tel is generic,"Ask clarification for butter, then oil type/brand",Which Amul Butter size? And which oil?,P0418/P0419/P0420 + oil products
+T047,2 kilo aata aur butter,clarification_loop,Butter ambiguous while atta quantity is clear,Resolve atta immediately; ask butter size separately,Which Amul/Butter pack size do you want?,Atta + Butter variants
+T048,5 packet butter,clarification_loop,Generic butter plus pack count is still underspecified,Ask brand/pack size before stock validation,Which butter brand and pack size do you want?,Butter products
+T049,Amul butter 500g aur Tata salt 1kg,bill_generation,Two exact products can be priced,"Match both, calculate item totals and grand total",,P0419 + P0406
+T050,Aashirvaad atta 5kg + Fortune oil 1L + Parle G 250g,bill_generation,Three exact products,Create itemized bill after validation,,P0403 + P0415 + P0428
+T051,2 kilo atta and 1 litre Fortune oil,confirmation,Clear two-item order,Show order summary and ask for confirmation,Please confirm: 2kg atta + 1L Fortune oil?,Atta + P0415
+T052,haan dono confirm kar do,confirmation_response,User confirms previously resolved order,Finalize order and generate bill/delivery note,,Depends on conversation state
+T053,haan bhai 500 gram wala Amul butter bhej dena,voice_style,Conversational Hinglish with explicit resolution,Extract 500g Amul Butter and proceed,,P0419
+T054,bhaiya jo sasta oil hai woh de do,preference_ambiguity,Customer gives preference but multiple candidates may satisfy,Select cheapest matching in-stock option or ask if multiple ties/important constraints,Sabse sasta kaunsa oil prefer karenge? [show options],Oil products
+T055,1kg Amul butter chahiye,stock_check,Exact product exists and stock is 1,Match P0420 and allow quantity 1; reject higher quantity,,P0420
+T056,2kg Amul butter chahiye,pack_and_stock,Requested 2kg does not correspond to a single 2kg catalog pack,"Offer 2x1kg if inventory allows, or ask customer if splitting is acceptable",2 x 1kg packs available. Should I add them?,P0420
+T057,6kg Fortune oil,pack_and_stock,Could be fulfilled via 5L + 1L only if policy permits mixed packs,Ask whether mixed pack sizes are acceptable,6L total needs 5L + 1L. Shall I use mixed pack sizes?,P0416 + P0415
+T058,makhan 500g,alias_matching,Makhan is an alias for butter,Map makhan→butter and match 500g variant,,P0419
+T059,tel 1 litre,alias_matching,Tel is an alias for oil,"Map tel→oil; if multiple oil types exist, ask clarification",Kaunsa 1L oil chahiye?,Oil products
+T060,chini aur chai patti ek ek packet,multi_item,Two colloquial grocery items and quantities,"Map chini→sugar, chai patti→tea; create two lines",,Sugar + Tea
