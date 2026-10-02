@@ -4,23 +4,24 @@ AI Order Desk is a grocery ordering prototype with a React customer and store in
 
 ## Project layout
 
-- `src/` — React + Vite frontend
+- `frontend/` — React + Vite app, npm manifests, and Vite configuration
 - `backend/` — FastAPI service, product catalog, datasets, and tests
 
 ## Frontend
 
 Requirements: Node.js and npm.
 
-```bash
+`ash
+cd frontend
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite (usually `http://localhost:5173`). To create a production build, run `npm run build`.
+Open the local URL printed by Vite (usually `http://localhost:5173`). To create a production build, run `npm run build` from `frontend/`.
 
 The frontend supports customer shopping, cart checkout, natural-language/voice ordering, and a store-owner dashboard for products and order status. Demo authentication and browser-side store data use `localStorage`.
 
-The API client reads `VITE_API_BASE_URL` and defaults to `http://localhost:8000`. When the API is unavailable, customer order parsing can use the frontend mock fallback.
+The API client in `frontend/src/services/api.js` reads `VITE_API_BASE_URL` and defaults to `http://localhost:8000`. When the API is unavailable, customer order parsing can use the frontend mock fallback.
 
 ## Backend
 
