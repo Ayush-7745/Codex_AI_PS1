@@ -1,0 +1,5 @@
+export default function ClarificationBox({ message, options = [], onSelect, disabled = false, quantity = false, value = '', onChange, onSubmit, error }) {
+  return <section className="clarification-box"><span className="clarification-mark">?</span><div className="clarification-content"><span className="eyebrow">QUICK CLARIFICATION</span><p>{message}</p>
+    {quantity ? <form className="clarification-quantity" onSubmit={(event) => { event.preventDefault(); onSubmit?.() }}><label className="sr-only" htmlFor="clarification-quantity">Requested quantity</label><input id="clarification-quantity" value={value} onChange={(event) => onChange?.(event.target.value)} placeholder="For example, 2 kg"/><button type="submit" disabled={disabled}>Send quantity <span>→</span></button>{error && <span className="clarification-error">{error}</span>}</form> : <div className="clarification-options">{options.map((option) => <button type="button" key={option.id} disabled={disabled} onClick={() => onSelect?.(option)}>{option.name}<small>₹{option.price} / {option.unit}</small></button>)}</div>}
+  </div></section>
+}
